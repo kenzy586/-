@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -32,15 +32,25 @@
         h2 { color: #ff7597; border-bottom: 1px solid #ff7597; padding-bottom: 10px; font-size: 22px; }
         p { font-size: 18px; line-height: 2; text-align: justify; white-space: pre-line; }
 
+        /* ستايل النجوم السيمبل جداً والملموم للقصص */
+        .rating-container { margin-top: 15px; border-top: 1px dashed #3a2b4f; padding-top: 10px; display: flex; align-items: center; justify-content: flex-start; gap: 8px; }
+        .rating-title { font-size: 13px; color: #ffb443; }
+        .stars { display: flex; direction: ltr; }
+        .stars span { font-size: 18px; cursor: pointer; color: #4a3b5f; transition: color 0.2s; padding: 0 2px; }
+        .stars span:hover, .stars span.hovered, .stars span.selected { color: #ffb443; }
+
         /* صفحة النصائح المخفية مبدئياً */
         #tips-page { display: none; }
 
-        /* صندوق البلاغات السيمبل */
-        .report-box { background-color: #1a1126; padding: 30px; border-radius: 25px; border: 2px solid #ff7597; margin-top: 60px; text-align: right; }
-        .report-box h3 { color: #ffb443; margin-top: 0; text-align: center; font-size: 20px; }
-        .report-box input, .report-box textarea { width: 100%; padding: 12px; margin-top: 10px; border-radius: 12px; border: 1px solid #ff7597; background-color: #2a1b3d; color: #fff; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        .report-box button { background-color: #ff7597; color: #1a1126; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 12px; cursor: pointer; margin-top: 15px; width: 100%; transition: 0.3s; }
+        /* صندوق البلاغات والتقييم العام السيمبل */
+        .report-box, .site-rating-box { background-color: #1a1126; padding: 25px; border-radius: 25px; border: 2px solid #ff7597; margin-top: 30px; text-align: right; }
+        .report-box h3, .site-rating-box h3 { color: #ffb443; margin-top: 0; text-align: center; font-size: 18px; }
+        .report-box button { background-color: #ff7597; color: #1a1126; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 12px; cursor: pointer; margin-top: 15px; width: 100%; transition: 0.3s; font-family: 'Cairo', sans-serif; }
         .report-box button:hover { background-color: #ffb443; }
+        
+        .site-rating-box { border-color: #ffb443; text-align: center; margin-top: 40px; }
+        .site-rating-box .stars { justify-content: center; margin-top: 8px; }
+        .site-rating-box .stars span { font-size: 26px; }
     </style>
 </head>
 <body>
@@ -70,13 +80,19 @@
             <div class="box story-card">
                 <h2>القصة 1: آخر تعليق 📱👻</h2>
                 <p>اشترى يوسف موبايل مستعمل من محل صغير في القاهرة. كان الجهاز شكله جديد تقريبًا، وسعره أقل من أي موبايل بنفس الإمكانيات. سأل البائع: "هو رخيص كده ليه؟" رد الرجل بسرعة: "صاحبه باعه ومستعجل على الفلوس." دفع يوسف المبلغ وأخذ الموبايل وعاد للبيت.
-                في الليل، بعد أن نقل ملفاته، فتح تطبيق الصور. وجد مئات الصور العادية. رحلات، أصدقاء، شوارع. لكن آخر صورة جعلته يتوقف. كانت صورة لغرفته.. غرفته هو! نفس السرير، نفس المكتب، نفس الستارة الرمادية. شعر يوسف بالغرابة، ربما مجرد غرفة تشبهها. لكن عندما كبر الصورة، رأى خدشًا صغيرًا على حافة المكتب.. هذا الخدش صنعه بنفسه قبل سنة. لم يعد هناك شك، الصورة لغرفته فعلًا. نظر إلى التاريخ، الصورة التقُطت قبل أسبوع من شرائه الموبايل! أغلق التطبيق بسرعة.
+                في الليل، بعد أن نقل ملفاته، فتح تطبيق الصور. وجد مئات الصور العادية. رحلات، أصدقاء، شوارع. لكن آخر صورة جعلته يتوقف. كانت صورة لغرفته.. غرفته هو! نفس السرير، نفس المكتب, نفس الستارة الرمادية. شعر يوسف بالغرابة، ربما مجرد غرفة تشبهها. لكن عندما كبر الصورة، رأى خدشًا صغيرًا على حافة المكتب.. هذا الخدش صنعه بنفسه قبل سنة. لم يعد هناك شك، الصورة لغرفته فعلًا. نظر إلى التاريخ، الصورة التقُطت قبل أسبوع من شرائه الموبايل! أغلق التطبيق بسرعة.
                 في اليوم التالي حاول تجاهل الأمر، لكن فضوله انتصر. فتح التطبيق مجددًا، فوجد صورة جديدة لم تكن موجودة أمس! هذه المرة ظهر هو نفسه نائمًا على السرير، والتاريخ المكتوب أسفل الصورة بعد خمسة أيام من اليوم! شعر بقشعريرة، حذف الصورة فاختفت.. ثم عادت بعد ثوانٍ! أغلق التطبيق وفتحه مرة أخرى، الصورة ما زالت موجودة، وفي أسفلها تعليق جديد لم يكن موجودًا من قبل: "لا تنم يوم الجمعة."
                 نظر يوسف إلى التقويم، بعد خمسة أيام كان يوم الجمعة فعلًا. ضحك بتوتر: "أكيد حد بيهزر." لكن شيئًا بداخله لم يقتنع. بدأ يبحث عن صاحب الموبايل القديم، بعد ساعات من البحث وجد حسابًا قديمًا باسم "كريم"، آخر منشور له كان قبل وفاته بيوم واحد يقول: "لو حد لقى موبايلي... أوعى تصدق الصور." لا يوجد أي منشور بعد ذلك ولا أي نشاط، وكأن صاحبه اختفى!
-                في مساء الجمعة قرر يوسف ألا ينام. أعد القهوة، وشغل التلفزيون، وظل مستيقظًا. الساعة 1.. ثم 2.. ثم 3.. لا شيء. ابتسم أخيرًا، ربما كان يبالغ. في الثالثة وسبع دقائق وصل إشعار: "تمت إضافة صورة جديدة." فتحها فورًا، كانت صورة لغرفته، لكن الغرفة كانت فارغة إلا من شخص يقف في الزاوية المظلمة لم تظهر ملامحه. كبّر الصورة أكثر فلاحظ شيئًا مرعبًا.. الشخص لم يكن يقف على الأرض، كان معلقًا in الهواء وكأنه يطفو!
+                في مساء الجمعة قرر يوسف ألا ينام. أعد القهوة، وشغل التلفزيون، وظل مستيقظًا. الساعة 1.. ثم 2.. ثم 3.. لا شيء. ابتسم أخيرًا، ربما كان يبالغ. في الثالثة وسبع دقائق وصل إشعار: "تمت إضافة صورة جديدة." فتحها فورًا، كانت صورة لغرفته، لكن الغرفة كانت فارغة إلا من شخص يقف في الزاوية المظلمة لم تظهر ملامحه. كبّر الصورة أكثر فلاحظ شيئًا مرعبًا.. الشخص لم يكن يقف على الأرض، كان معلقًا في الهواء وكأنه يطفو!
                 ارتجفت يده، وفي اللحظة نفسها انطفأت الكهرباء وغرقت الغرفة في الظلام. لم يعد يرى سوى ضوء شاشة الموبايل. ثم ظهر تعليق جديد أسفل الصورة: "التفت." تجمد.. لم يلتفت. ظهر تعليق آخر: "أنا خلفك." ألقى الموبايل على السرير وقفز نحو مفتاح الإضاءة. عادت الكهرباء بعد ثوانٍ، التقط أنفاسه.. لا يوجد أحد. لكن الموبايل كان لا يزال مضاءً وعليه صورة جديدة! هذه المرة كانت الصورة ملتقطة من داخل غرفته من زاوية أعلى الدولاب، وكان يظهر فيها يوسف واقفًا الآن وينظر نحو الشاشة، وخلفه مباشرة... شخص طويل جدًا يبتسم!
                 استدار يوسف بسرعة.. لم يكن هناك أحد. عاد بنظره إلى الموبايل، اختفى الشخص من الصورة، وكأن وجوده مرتبط بنظر يوسف فقط! في الصباح قرر التخلص من الجهاز، ذهب إلى النيل وألقاه في الماء بنفسه، راقبه وهو يغرق وشعر أخيرًا بالراحة. لكن عندما عاد إلى البيت... وجد الموبايل على مكتبه! جافًا تمامًا وكأنه لم يلمس الماء أبدًا! وظهرت رسالة جديدة على الشاشة: "محاولة جيدة."
                 ومنذ تلك الليلة بدأت الصور تظهر كل يوم، كل صورة كانت تكشف حدثًا سيقع غدًا. في البداية كانت أشياء بسيطة؛ كوب ينكسر، صديق يزوره، انقطاع الكهرباء، وكلها حدثت فعلًا. حتى ظهرت صورة أخيرة.. صورة لقبر، وعليه اسم يوسف، وتاريخ بعد سبعة أيام فقط! أسفل الصورة كان هناك تعليق واحد: "هذه ليست نبوءة.. هذه ذكرى." 📱👻</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_horror_1">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
@@ -87,6 +103,12 @@
                 في اليوم التالي ظهر الظل مرة أخرى، وفي كل مرة كان يختفي قبل أن يراه بوضوح.
                 قرر آدم أن يلتقط صورة للممر بهاتفه. وعندما نظر إلى الصورة في المنزل، رأى شخصًا يقف في نهاية الممر وينظر مباشرة إلى الكاميرا.
                 في اليوم التالي عرض الصورة على مدير المدرسة. تفاجأ المدير وقال إن هذا المكان كان جزءًا من المدرسة القديمة قبل تجديدها منذ سنوات طويلة. وعندما عاد آدم للصورة مرة أخرى، اختفى الشخص منها تمامًا. النهاية.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_horror_2">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
@@ -95,6 +117,12 @@
                 في الليلة التالية اتصل الرقم نفسه في نفس التوقيت، هذه المرة قال الصوت: "لا تنظر من النافذة."
                 شعر كريم بالخوف الشديد، أغلق الستائر ونام. وفي الصباح اكتشف أن التيار الكهربائي انقطع عن الحي كله في تلك الليلة، وأن معظم الجيران كانوا نائمين.
                 استمرت المكالمات عدة ليالٍ ثم توقفت فجأة. بعد أشهر غيّر كريم هاتفه ورقمه.. لكن في إحدى الليالي استيقظ على رسالة قصيرة من رقم مجهول: "اشتقت إليك." النهاية.!</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_horror_3">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
@@ -102,6 +130,12 @@
                 <p>انتقلت أسرة لقضاء عدة أيام في فندق قديم. لاحظت الابنة الصغيرة أن جميع الغرف مرقمة بشكل طبيعي إلا أن الرقم 13 غير موجود. سألت موظف الاستقبال، فتغير وجهه وقال إن الفندق لا يحتوي على هذه الغرفة.
                 لكن في الليل سمعت خطوات خلف باب غرفتها، وعندما فتحت الباب لم تجد أحدًا. وفي نهاية الممر رأت بابًا مكتوبًا عليه الرقم 13، اقتربت منه ببطء، لكن عندما لمسته انطفأت الأنوار.. وعندما عادت الأنوار اختفى الباب تمامًا وكأنه لم يكن موجودًا!
                 في الصباح سألت والدها، وعندما ذهب معها إلى المكان لم يجد أي أثر للغرفة.. وظلت تتساءل طوال حياتها إن كانت قد حلمت أم لا. النهاية.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_horror_4">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div id="adventure" class="section-title">قسم قصص المغامرات (5 قصص) 🤠</div>
@@ -109,26 +143,56 @@
             <div class="box story-card">
                 <h2>القصة 1: خريطة جدي السرية 🗺️</h2>
                 <p>وجد ماجد خريطة قديمة مخبأة في صندوق جده الراحل بالعلية. كانت الخريطة تشير إلى مكان في الغابة المجاورة للقرية مكتوب عليه "الكنز المفقود". جمع حقيبته وانطلق صباحاً، واجه أشجاراً متشابكة وضباباً كثيفاً، حتى وصل إلى كهف صخري صغير. وجد هناك صندوقاً خشبياً قديماً، وعندما فتحه لم يجد ذهباً، بل وجد ألبوم صور نادرة لجده في شبابه يوثق رحلاته حول العالم، وعرف أن المغامرة والذكريات هي الكنز الحقيقي.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_adventure_1">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 2: ليلة في الجزيرة المهجورة 🏝️</h2>
                 <p>تعطل قارب الصيد الصغير الذي يملكه كريم وجرفته الأمواج إلى جزيرة غير مأهولة بالسكان. بدلاً من الاستسلام، بدأ يجمع حطام الخشب لبناء مأوى وإشعال نار للتدفئة. وفي الليل سمع أصواتاً غريبة واستكشف المكان بكشافه ليجد سفينة قديمة غارقة على الشاطئ مليئة بالأدوات القديمة. استخدم ذكاءه لإصلاح جهازه اللاسلكي من قطع السفينة، وحل الصباح وجاءت قوات الإنقاذ بعد أن استقبلت إشارته بنجاح.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_adventure_2">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 3: الكهف المضيء ⛰️</h2>
                 <p>أثناء رحلة تخييم في جبال سيناء، ضلّت نور وأخوها الطريق ودخلا فتحة جبلية ضيقة هرباً من المطر. سارا في الظلام حتى وصلا إلى تجويف عملاق داخل الجبل، والمفاجأة أن المكان كان يضيء بنور أزرق ساحر بسبب نباتات وفطريات نادرة تنمو على الصخور وتنعكس على بحيرة جوفية نقية. التقطا صوراً مذهلة وتابعا السير حتى وجدا مخرجاً آخر قادهما إلى معسكرهما بأمان ومغامرة لا تُنسى.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_adventure_3">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 4: منطاد الرياح العاصفة 🎈</h2>
                 <p>حلق سامي بمنطاده الهوائي في رحلة استكشافية فوق التلال، لكن فجأة هبت عاصفة غير متوقعة سحبته بعيداً واختل توازن المنطاد. بدأ سامي يتصرف بسرعة وهدوء، ورمى الأكياس الرملية الزائدة ليرتفع فوق الغيوم ويتفادى الاصطدام بالجبل. قاد المنطاد ببراعة مستغلاً تيارات الهواء حتى هدأت العاصفة وهبط بسلام وسط حقل زراعي واسع، واستقبله المزارعون بالترحاب.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_adventure_4">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 5: الغواص والمدينة الغارقة 🌊</h2>
-                <p>أثناء غوص عمر في أعماق البحر الأحمر, لاحظ تشكيلات صخرية غريبة تبدو وكأنها أعمدة أثرية. سبح بحذر ليجد بقايا مدينة كاملة غرقت تحت الماء منذ مئات السنين، غطتها الشعاب المرجانية وأصبحت بيتاً للأسماك الملونة. عثر على عملة معدنية قديمة جداً، وقام بتصوير المكان وإبلاغ وزارة الآثار التي سجلت الموقع كاكتشاف تاريخي عظيم بفضل شجاعته وفضوله.</p>
+                <p>أثناء غوص عمر في أعماق البحر الأحمر، لاحظ تشكيلات صخرية غريبة تبدو وكأنها أعمدة أثرية. سبح بحذر ليجد بقايا مدينة كاملة غرقت تحت الماء منذ مئات السنين، غطتها الشعاب المرجانية وأصبحت بيتاً للأسماك الملونة. عثر على عملة معدنية قديمة جداً، وقام بتصوير المكان وإبلاغ وزارة الآثار التي سجلت الموقع كاكتشاف تاريخي عظيم بفضل شجاعته وفضوله.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_adventure_5">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div id="islamic" class="section-title">قسم قصص إسلامية (5 قصص) 🌙</div>
@@ -136,29 +200,56 @@
             <div class="box story-card">
                 <h2>القصة 1: أمانة الخباز وبركة الرزق 🌾</h2>
                 <p>كان هناك خباز أمانته مشهورة في المدينة، وفي يوم سقطت صرة مليئة بالدنانير الذهبية من تاجر ثري أمام محله. أخذها الخباز وحفظها عنده، وعندما عاد التاجر يبحث عنها وهو يبكي، سلمها له كاملة دون تردد. رفض الخباز أن يأخذ مكافأة وقال: "أبتغي الأجر من الله". أُعجب التاجر بأمانته وقرر أن يشتري كل بضائع الخباز ليعمل معه شريكاً، ففتحت عليه أبواب الرزق الحلال ببركة الأمانة.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_islamic_1">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 2: بئر الشاب الفقير 💧</h2>
                 <p>عاش شاب فقير في قرية تعاني من قلة الماء، وكان يقضي يومه في حفر بئر وسط الصحراء رغم استهزاء البعض به لصعوبة الأمر. كان يتوكل على الله ويستغفر طوال الوقت. وبعد أسابيع من التعب والجهد، تفجرت المياه العذبة والنقية من الأرض، وأصبحت البئر مقصداً لكل القوافل والقرى المجاورة، وتبدلت أحوال الشاب بفضل صبره ويقينه في فرج الله وسعُد الجميع به.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_islamic_2">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 3: كرم التابعي طلحة بن عبيد الله 🍇</h2>
                 <p>كان طلحة بن عبيد الله رجلًا كريماً جواداً، إذا كثر ماله فتح بابه للناس يطعمهم ويعطيهم الهدايا، وإذا قلّ ماله أغلق بابه حياءً حتى لا يحرج أحداً. قال له أحد أقاربه يوماً: "لم أرَ أسوأ من أصحابك، يأتونك وقت غناك ويهجرونك وقت فقرك!". فتبسم طلحة وقال: "بل هذا من كرم أخلاقهم! يأتوننا في وقت نقدر فيه على إكرامهم، ويتركوننا في وقت نعجز فيه عن القيام بحقهم"، فضرب أروع مثل في حسن الظن بالناس.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_islamic_3">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 4: بر الوالدين والفرج المستحيل 🥛</h2>
                 <p>يحكى عن رجل كان يخرج يومياً لرعي الأغنام، ولا يشرب حليباً ولا يطعم أولاده حتى يشرب والداه العجوزان أولاً. وفي ليلة تأخر وعاد ووجدهما نائمين، فوقف بالقدح عند رأسهما يرفض إيقاظهما ويرفض إطعام أولاده الباكين حتى استيقظا مع الفجر وشربا. بارك الله في حياته ورزقه، وفي يوم انطبقت عليه صخرة في كهف مع أصحابه، فدعا الله ببره لوالديه، فانفرجت الصخرة وخرجوا يمشون بأمان بفضل هذا العمل الصالح.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                     </div>
+                </div>
             </div>
 
             <div class="box story-card">
                 <h2>القصة 5: حكمة الرجل القنوع والملك 👑</h2>
                 <p>مرّ ملك برجل فقير يجلس تحت ظل شجرة يأكل كسرة خبز يابسة ويحمد الله بنبرة مليئة بالرضا والفرح. تعجب الملك وسأله: "على ماذا تحمد الله وأنت بهذه الحال؟". فقال الرجل: "أحمد الله الذي عافاني في بدني، ورزقني قوتاً يكفيني، وجعلني غنياً في قلبي، فكم من ملك يملك الدنيا وقلبه يملأه الهم والخوف!". فبكى الملك من حكمة الرجل وعرف أن الغنى الحقيقي هو غنى النفس والقناعة بما قسمه الله.</p>
+                <div class="rating-container">
+                    <span class="rating-title">تقييمكِ:</span>
+                    <div class="stars" data-rating-id="story_islamic_5">
+                        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                    </div>
+                </div>
             </div>
         </div>
-
 
         <div id="tips-page">
             <h1>نصائح وإرشادات مفيدة 💡✨</h1>
@@ -179,13 +270,18 @@
             </div>
         </div>
 
+        <div class="site-rating-box">
+            <h3>⭐ ما هو تقييمكِ لموقع هيا لنقرأ؟ ⭐</h3>
+            <div class="stars" data-rating-id="main_site_rating">
+                <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+            </div>
+        </div>
 
-                <div class="report-box">
+        <div class="report-box">
             <h3>📬 عندك مشكلة أو اقتراح؟ أرسلي بلاغكِ هنا</h3>
             <p style="font-size: 15px; text-align: center; color: #ffb443;">اضغطي على الزر بالأسفل لفتح بريدكِ وإرسال المشكلة مباشرة لنا بدون مغادرة الموقع!</p>
             <button onclick="window.location.href='mailto:contact.hayabinaneqra@gmail.com?subject=ارسل لموقع هيا لنقرأ&body=اكتبي مشكلتك...'">إرسال البلاغ عبر الإيميل 🚀</button>
-                </div>
-            
+        </div>
 
     </div>
 
@@ -220,8 +316,48 @@
                 }
             }
         }
+
+        // كود تشغيل نظام النجوم وحفظها في جهاز القارئ فوراً وبدون أي انتقال لصفحة تانية
+        document.querySelectorAll('.stars').forEach(starContainer => {
+            const ratingId = starContainer.getAttribute('data-rating-id');
+            const stars = starContainer.querySelectorAll('span');
+            
+            const savedRating = localStorage.getItem(ratingId);
+            if (savedRating) {
+                highlightStars(stars, savedRating);
+            }
+
+            stars.forEach(star => {
+                star.addEventListener('mouseover', () => {
+                    const value = star.getAttribute('data-value');
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-value') <= value) s.classList.add('hovered');
+                    });
+                });
+
+                star.addEventListener('mouseout', () => {
+                    stars.forEach(s => s.classList.remove('hovered'));
+                });
+
+                star.addEventListener('click', () => {
+                    const value = star.getAttribute('data-value');
+                    localStorage.setItem(ratingId, value);
+                    highlightStars(stars, value);
+                });
+            });
+        });
+
+        function highlightStars(stars, value) {
+            stars.forEach(s => {
+                if (s.getAttribute('data-value') <= value) {
+                    s.classList.add('selected');
+                } else {
+                    s.classList.remove('selected');
+                }
+            });
+        }
     </script>
 
 </body>
-    </html>
-                
+        </html>  
+        
